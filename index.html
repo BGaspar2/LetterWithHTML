@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de San Valentín</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffebee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .carta {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .carta h1 {
+            color: #e91e63;
+            font-size: 24px;
+        }
+
+        .carta p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .boton {
+            background-color: #e91e63;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .boton:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carta">
+        <h1>💌 Carta de San Valentín 💌</h1>
+        <p>Hola amor,</p>
+        <p>En este día tan especial, quiero preguntarte algo muy importante...</p>
+        <p>¿Quieres ser mi San Valentín?</p>
+        <button class="boton" onclick="responder()">¡Sí, quiero!</button>
+    </div>
+
+    <script>
+        function responder() {
+            alert('¡Yay! ¡Eres el/la mejor! 💖');
+        }
+    </script>
+
+</body>
+</html>
