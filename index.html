@@ -48,6 +48,47 @@
         .boton:hover {
             background-color: #c2185b;
         }
+
+        /* Estilo del modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            background-color: #e91e63;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .close-btn:hover {
+            background-color: #c2185b;
+        }
     </style>
 </head>
 <body>
@@ -57,12 +98,24 @@
         <p>Hola amor mío,</p>
         <p>En este día tan especial, quiero preguntarte algo muy importante...</p>
         <p>¿Quieres ser mi San Valentín?</p>
-        <button class="boton" onclick="responder()">¡Sí, quiero!</button>
+        <button class="boton" onclick="mostrarModal()">¡Sí, quiero!</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fb0%2F9a%2F06%2Fb09a0682c2cd4d291bf195d52870affd.gif&sp=1738508072T906d7e62c4afade9e103a4a61aab22a64500599d940743d9ad5c4d8399471080" alt="Imagen de amor">
+            <p>¡Yay! ¡Eres la mejor! 💖 Te amo un montón</p>
+            <button class="close-btn" onclick="cerrarModal()">Cerrar</button>
+        </div>
     </div>
 
     <script>
-        function responder() {
-            alert('¡Yay! ¡Eres la mejor! 💖');
+        function mostrarModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function cerrarModal() {
+            document.getElementById('modal').style.display = 'none';
         }
     </script>
 
