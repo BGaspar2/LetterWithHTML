@@ -197,8 +197,9 @@
         <div class="modal-invitacion-content">
             <h2>Me preguntaba si..</h2>
             <p>¿Te gustaría ir de picnic conmigo? jejejej </p>
-            <img src="https://th.bing.com/th/id/OIP.lx16cAUk2ih4p9BOzJCswwAAAA?rs=1&pid=ImgDetMain" alt="Imagen de restaurante">
-            <button class="close-invitacion-btn" onclick="cerrarInvitacion()">Cerrar</button>
+            <img src="https://th.bing.com/th/id/OIP.lx16cAUk2ih4p9BOzJCswwAAAA?rs=1&pid=ImgDetMain" alt="Imagen de picnic">
+            <button class="boton" onclick="aceptarInvitacion()">¡Claro que sí! 💖 Será un día increíble</button>
+         <!--   <button class="close-invitacion-btn" onclick="cerrarInvitacion()">Cerrar</button> -->
         </div>
     </div>
 
@@ -217,6 +218,11 @@
 
         function cerrarInvitacion() {
             document.getElementById('modal-invitacion').style.display = 'none';
+        }
+
+        function aceptarInvitacion() {
+            cerrarInvitacion(); // Cierra el modal de la invitación
+            mostrarModal(); // Muestra el modal de "¡Yay! ¡Eres la mejor!"
         }
     </script>
 
